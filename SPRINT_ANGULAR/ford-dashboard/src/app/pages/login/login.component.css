@@ -1,0 +1,135 @@
+.login-page {
+  min-height: 100vh;
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+  background-color: #ffffff;
+}
+
+.left-side {
+  width: 60%;
+  background: url('/img/mustang_back.avif') no-repeat center center;
+  background-size: cover;
+  clip-path: polygon(0 0, 100% 0, 85% 100%, 0 100%);
+  margin-right: -15%;
+  z-index: 1;
+}
+
+
+.right-side {
+  flex: 1;
+  background: linear-gradient(135deg, #050d1a 0%, #0a3161 55%, #123a70 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  padding-left: 15%; 
+}
+
+
+.login-panel {
+  width: 100%;
+  max-width: 340px;
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 25px 60px rgba(0,0,0,0.35);
+}
+
+.panel-logo {
+  max-width: 90px;
+  margin-bottom: 2rem;
+}
+
+.login-title {
+  color: #0a3161;
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 2.2rem;
+}
+
+.login-panel form {
+  width: 100%;
+}
+
+.input-box {
+  margin-bottom: 1.4rem;
+  text-align: left;
+}
+
+.input-box label {
+  display: block;
+  color: #555;
+  font-size: 0.8rem;
+  margin-bottom: 6px;
+}
+
+.input-box input {
+  width: 100%;
+  background: #f4f6f9;
+  border: 1px solid #e0e4ea;
+  border-bottom: 2px solid #d0d5dd;
+  padding: 10px 8px;
+  color: #1c1c1c;
+  font-size: 15px;
+  outline: none;
+  transition: 0.25s;
+  border-radius: 4px 4px 0 0;
+}
+
+.input-box input::placeholder {
+  color: #9aa1ab;
+}
+
+.input-box input:focus {
+  border-bottom-color: #2f9cf4;
+  background: #eef2f7;
+}
+
+.error-box {
+  background: rgba(220, 53, 69, 0.1);
+  border: 1px solid rgba(220, 53, 69, 0.3);
+  color: #c22b3a;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 13px;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.login-btn {
+  width: 100%;
+  padding: 12px 0;
+  background: #2f9cf4;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: 0.25s;
+  margin-top: 0.5rem;
+}
+
+.login-btn:hover:not(:disabled) {
+  background: #0b87ec;
+}
+
+.login-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+@media (max-width: 850px) {
+  .left-side {
+    display: none; 
+  }
+  .right-side {
+    padding-left: 2rem;
+  }
+}
