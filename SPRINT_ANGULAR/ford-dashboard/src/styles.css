@@ -1,0 +1,35 @@
+:root {
+  --ford-blue: #0a3161;
+  --ford-blue-light: #1a4d8f;
+  --ford-gray: #1c1c1c;
+  --ford-gray-light: #f4f4f4;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Roboto, -apple-system, sans-serif;
+  background-color: var(--ford-gray-light);
+}
+
+.btn-primary {
+  background-color: var(--ford-blue) !important;
+  border-color: var(--ford-blue) !important;
+}
+
+.btn-primary:hover {
+  background-color: var(--ford-blue-light) !important;
+  border-color: var(--ford-blue-light) !important;
+}
+
+.card {
+  border: none;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.navbar {
+  background-color: var(--ford-gray) !important;
+}

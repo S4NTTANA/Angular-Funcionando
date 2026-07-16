@@ -1,0 +1,174 @@
+.home-layout {
+  min-height: 100vh;
+  display: flex;
+  background-color: #ffffff;
+  position: relative;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+/* Botão Hambúrguer Estilizado */
+.hamburger-btn {
+  position: fixed;
+  top: 15px;
+  left: 20px;
+  z-index: 1100;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 26px;
+  height: 20px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.hamburger-btn span {
+  width: 100%;
+  height: 3px;
+  background-color: #ffffff; /* Fica branco para contrastar no header */
+  border-radius: 2px;
+  transition: all 0.25s ease-in-out;
+}
+
+/* Animação do botão virando X quando aberto */
+.hamburger-btn.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger-btn.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-btn.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Sidebar Oculta por padrão (Sliding) */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -240px;
+  width: 240px;
+  height: 100vh;
+  background: linear-gradient(180deg, #050d1a 0%, #0a3161 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5rem 1.2rem 2rem 1.2rem;
+  z-index: 1000;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 4px 0 15px rgba(0,0,0,0.25);
+  will-change: transform;
+}
+
+/* Estado Aberto da Sidebar */
+.sidebar.open {
+  transform: translateX(240px);
+}
+
+.sidebar-logo {
+  max-width: 70px;
+  margin-bottom: 3rem;
+}
+
+.sidebar-nav {
+  flex: 1;
+  width: 100%;
+}
+
+.sidebar-btn {
+  width: 100%;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.12);
+  color: white;
+  padding: 12px 16px;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.25s;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 0.8rem;
+}
+
+.sidebar-btn:hover {
+  background: rgba(47,156,244,0.25);
+  border-color: #2f9cf4;
+}
+
+.sidebar-btn.logout:hover {
+  background: rgba(220,53,69,0.25);
+  border-color: rgba(220,53,69,0.5);
+}
+
+.home-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+/* Header dando espaço para o botão hambúrguer na esquerda */
+.home-header {
+  background: linear-gradient(90deg, #050d1a 0%, #0a3161 100%);
+  padding: 1.2rem 2.5rem 1.2rem 4rem; 
+  color: white;
+  font-weight: 600;
+  font-size: 1.1rem;
+  letter-spacing: 0.3px;
+}
+
+.home-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1.5rem;
+  text-align: center;
+}
+
+.welcome-heading {
+  color: #0a3161;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  word-break: break-word;
+}
+
+.welcome-subtext {
+  color: #6b7280;
+  margin-bottom: 2.5rem;
+  font-size: 1rem;
+}
+
+.hero-image {
+  max-width: 100%;
+  width: 500px;
+  height: auto;
+  filter: drop-shadow(0 20px 30px rgba(0,0,0,0.25));
+}
+
+@media (max-width: 576px) {
+  .welcome-heading {
+    font-size: 1.5rem;
+  }
+  
+  .welcome-subtext {
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .home-header {
+    font-size: 0.95rem;
+    padding: 1.2rem 1.5rem 1.2rem 3.5rem;
+  }
+  
+  .home-body {
+    padding: 1.5rem 1rem;
+  }
+}
